@@ -31,6 +31,7 @@ export class LoginPage {
     }
   }
  
+ 
   //Accion boton registro
   registro() {
     this.navCtrl.push('RegistroPage');
