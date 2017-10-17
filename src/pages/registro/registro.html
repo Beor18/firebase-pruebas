@@ -15,4 +15,16 @@
 
 <ion-content padding>
 
+  <ion-item>
+    <ion-label floating>Ingrese Su Email: </ion-label>
+    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label floating>Ingrese Su Contraseña: </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+  </ion-item>
+
+  <button ion-button color="dark" (click)="registro(user)">Registrarse</button>
+
 </ion-content>
