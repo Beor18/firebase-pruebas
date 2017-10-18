@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthProvider } from '../../providers/auth/auth';
+import { Http, Response, Headers, RequestOptions } from '@angular/http';
+//import { Headers, RequestOptions } from '@angular/http';
+import 'rxjs/add/operator/map';
 
 
 @IonicPage()
@@ -11,8 +14,16 @@ import { AuthProvider } from '../../providers/auth/auth';
 })
 export class HomePage {
 
+  public options;
+  public headers: Headers;
+  posts:any;
+
   constructor(private afAuth: AngularFireAuth, private toast: ToastController,
-    public navCtrl: NavController, public navParams: NavParams, public auth : AuthProvider) {
+    public navCtrl: NavController, public navParams: NavParams, public auth : AuthProvider, public http:Http) {
+      /*this.http.get("http://www.flybynet.org/wp-json/wp/v2/posts", this.options).map((res:Response) => res.json()).subscribe(posts => {
+        console.log(posts);
+        this.posts = posts;
+      });*/
   }
 
   //Mensaje al entrar
