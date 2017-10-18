@@ -7,6 +7,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 
+
 @IonicPage()
 @Component({
   selector: 'page-home',
