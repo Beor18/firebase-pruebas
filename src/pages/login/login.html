@@ -24,7 +24,9 @@
       <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
 
-  <button ion-button (click)="login(user)">Entrar</button>
-  <button ion-button color="dark" (click)="registro()">Registrarse</button>
+  <div padding>
+    <button ion-button (click)="login(user)">Entrar</button>
+    <button ion-button color="dark" (click)="registro()">Registrarse</button>
+  </div>
 
 </ion-content>
