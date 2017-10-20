@@ -7,6 +7,7 @@ import { AuthProvider } from '../../providers/auth/auth';
 //import 'rxjs/add/operator/map';
 import { NotasService } from "../../services/notas.service";
 import { DetallesPage } from "../detalles/detalles";
+import { LoginPage } from "../login/login";
 
 
 @IonicPage()
@@ -63,5 +64,6 @@ export class HomePage {
 
   cerrarSesion(){
     this.auth.logout();
+    this.navCtrl.setRoot(LoginPage);
 }
 }
