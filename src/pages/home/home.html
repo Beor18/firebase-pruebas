@@ -18,8 +18,15 @@
       </div>-->
 
       <p>Hola </p>
-
-  <div padding>
-    <button ion-button block (click)="cerrarSesion()">Cerrar Sesión</button>
-  </div>
+      <ion-list>
+        <button ion-item *ngFor= "let nota of notas" (click)="irDetalle(nota.id)">
+          {{nota.title}}
+        </button>
+      </ion-list>
+      <div padding>
+        <button ion-button block (click)="crearNota()">Crear Nota</button>
+      </div>
+      <div padding>
+        <button ion-button block (click)="cerrarSesion()">Cerrar Sesión</button>
+      </div>
 </ion-content>

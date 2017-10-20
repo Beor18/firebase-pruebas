@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AuthProvider } from '../../providers/auth/auth';
-import { Http, Response, Headers, RequestOptions } from '@angular/http';
+//import { Http, Response, Headers, RequestOptions } from '@angular/http';
 //import { Headers, RequestOptions } from '@angular/http';
-import 'rxjs/add/operator/map';
-
+//import 'rxjs/add/operator/map';
+import { NotasService } from "../../services/notas.service";
+import { DetallesPage } from "../detalles/detalles";
 
 
 @IonicPage()
@@ -15,16 +16,31 @@ import 'rxjs/add/operator/map';
 })
 export class HomePage {
 
-  public options;
-  public headers: Headers;
-  posts:any;
+  //public options;
+  //public headers: Headers;
+  //posts:any;
 
+  //Declaramos variable notas
+  notas: {};
+  @ViewChild('') nav:NavController;
   constructor(private afAuth: AngularFireAuth, private toast: ToastController,
-    public navCtrl: NavController, public navParams: NavParams, public auth : AuthProvider, public http:Http) {
+    public navCtrl: NavController, public navParams: NavParams, public auth : AuthProvider, public notasService : NotasService) {
       /*this.http.get("http://www.flybynet.org/wp-json/wp/v2/posts", this.options).map((res:Response) => res.json()).subscribe(posts => {
         console.log(posts);
         this.posts = posts;
       });*/
+      notasService.getNotas()
+        .subscribe(notas => {
+          this.notas =  notas;
+        });
+  }
+
+  public irDetalle(id){
+    this.navCtrl.push(DetallesPage, {id:id});
+  }
+
+  public crearNota(){
+    this.navCtrl.push(DetallesPage, {id:0});
   }
 
   //Mensaje al entrar
