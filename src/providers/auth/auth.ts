@@ -13,8 +13,8 @@ export class AuthProvider {
  
 
  // Logout de usuario
- logout(){
-   this.afAuth.auth.signOut().then(()=>{
+ logout() : Promise<any>{
+   return this.afAuth.auth.signOut().then(()=>{
      // hemos salido
    })
  }
