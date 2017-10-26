@@ -65,5 +65,7 @@ export class HomePage {
   cerrarSesion(){
     this.auth.logout();
     this.navCtrl.setRoot(LoginPage);
+
+    //Firebase rules auth != null
 }
 }
