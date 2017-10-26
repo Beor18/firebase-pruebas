@@ -27,7 +27,7 @@ export class NotasService {
      * createNote
      */
     public createNote(note) {
-        this.afDB.database.ref('/notas/'+note.id).push(note);
+        this.afDB.database.ref('/notas/'+note.id).set(note);
         //this.notas.push(note);
     }
 
