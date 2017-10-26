@@ -20,7 +20,7 @@ export class AuthProvider {
 
   // Logout de usuario
   logout(): any{
-    this.afAuth.auth.signOut();
+    return this.afAuth.auth.signOut();
   }
 
 }
