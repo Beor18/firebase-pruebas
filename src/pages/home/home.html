@@ -17,7 +17,7 @@
     
       </div>-->
 
-      <p>Hola </p>
+      <p >{{(notasData | async)?.title}} </p>
       <ion-list>
         <button ion-item *ngFor= "let nota of notas" (click)="irDetalle(nota.id)">
           {{nota.title}}
