@@ -18,7 +18,7 @@ export class DetallesPage {
 
     }else {
       notasService.getNote(this.id)
-      .subscribe(note => {
+      .valueChanges().subscribe(note => {
         this.note = note;
       });
     }
