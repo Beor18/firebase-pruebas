@@ -12,7 +12,7 @@ export class NotasService {
      */
     public getNotas() {
         //return this.notas;
-        return this.afDB.list('notas/').valueChanges();
+        return this.afDB.list<any>('/notas/').valueChanges();
     }
 
     /**
@@ -20,14 +20,14 @@ export class NotasService {
      */
     public getNote(id) {
         //return this.notas.filter(function(e, i){ return e.id == id})[0] || {id:null, title:null, description:null};
-        return this.afDB.object('notas/'+id).valueChanges();
+        return this.afDB.object('/notas/'+id);
     }
 
     /**
      * createNote
      */
     public createNote(note) {
-        this.afDB.database.ref('notas/'+note.id).set(note);
+        this.afDB.database.ref('/notas/'+note.id).push(note);
         //this.notas.push(note);
     }
 
