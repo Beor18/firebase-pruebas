@@ -1,26 +1,31 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
 
-## How to use this template
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+## Introducción LOGIN + FIREBASE DATABASE
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+*Espero que sirva como una pequeña base, hay muchas cosas por mejorar pero por falta de tiempo no puedo, por eso dejo esta base de Login + Firebase Database con cerrar sesion y mostrar datos de la base de datos despues del login. La idea es que se arme algo estable con estas cosas básicas así si alguien quiere hacer algo similar no tenga que estar pidiendo ayuda en los foros o investigando en distintas páginas y no decidirse por cual metodo ir. Sin más que decir, los aportes son bienvenidos. Sigan aprendiendo...
 
-### With the Ionic CLI:
+Su camarada Fernando López.
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+### Como Instalar:
 
-```bash
-$ sudo npm install -g ionic cordova
-$ ionic start myBlank blank
-```
-
-Then, to run it, cd into `myBlank` and run:
+En la terminal, corremos estos comandos:
 
 ```bash
-$ ionic cordova platform add ios
-$ ionic cordova run ios
+$ git clone https://github.com/Beor18/firebase-pruebas.git
+$ cd firebase-pruebas
+$ npm install
 ```
 
-Substitute ios for android if not on a Mac.
+Para correr en una plataforma:
+
+```bash
+$ ionic cordova platform add android
+$ ionic cordova run android
+```
+
+Para correr en el navegador:
+
+```bash
+$ ionic serve
+```
 
