@@ -1,18 +1,18 @@
 import { Injectable } from "@angular/core";
 import { AngularFireDatabase } from "angularfire2/database/database";
+import { AngularFireAuth } from 'angularfire2/auth';
 
 @Injectable()
 export class NotasService {
-    constructor(public afDB: AngularFireDatabase) {
+    constructor(public afDB: AngularFireDatabase, private afAuth: AngularFireAuth) {
 
     }
     notas = [];
     /**
      * getNotas
      */
-    public getNotas() {
-        //return this.notas;
-        return this.afDB.list<any>('/notas/').valueChanges();
+    public getNotas() {    
+     return this.afDB.list<any>('/notas/').valueChanges();    
     }
 
     /**
@@ -27,9 +27,11 @@ export class NotasService {
      * createNote
      */
     public createNote(note) {
+        this.afAuth.authState.subscribe(auth => {
         this.afDB.database.ref('/notas/'+note.id).set(note);
         //this.notas.push(note);
-    }
+    })
+}
 
      /**
      * editarNote
