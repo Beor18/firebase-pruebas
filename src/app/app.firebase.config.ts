@@ -1,8 +1,8 @@
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyBPPa1BjTvdrFlo41no1Yt71vTpld-m9As",
-    authDomain: "flybynetfer.firebaseapp.com",
-    databaseURL: "https://flybynetfer.firebaseio.com",
-    projectId: "flybynetfer",
-    storageBucket: "flybynetfer.appspot.com",
-    messagingSenderId: "1002706209766"
+    apiKey: "SU API KEY",
+    authDomain: "DOMINIO",
+    databaseURL: "URL DE FIREBASE",
+    projectId: "PROYECTO",
+    storageBucket: "OTRO",
+    messagingSenderId: "OTRO"
   }; 
