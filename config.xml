@@ -84,4 +84,5 @@
     <plugin name="cordova-plugin-ionic-webview" spec="^1.1.11" />
     <plugin name="cordova-plugin-crosswalk-webview" spec="~2.3.0" />
     <engine name="android" spec="~6.1.2" />
+    <engine name="browser" spec="~4.1.0" />
 </widget>
