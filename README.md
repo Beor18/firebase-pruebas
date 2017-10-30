@@ -29,3 +29,9 @@ Para correr en el navegador:
 $ ionic serve
 ```
 
+### Demo Progressive Web Apps:
+
+```bash
+$ https://flybynetfer.firebaseapp.com/#/login
+```
+
