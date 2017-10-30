@@ -22,8 +22,8 @@ import { DetallesPage } from "../pages/detalles/detalles";
   declarations: [
     MyApp,
     //HomePage,
-    AccordionComponent,
-    DetallesPage
+    AccordionComponent
+    //DetallesPage
   ],
   imports: [
     BrowserModule,
